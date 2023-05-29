@@ -10,10 +10,28 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 100px;
+}
+
+#header_text {
+    text-align: center;
+}
+
+#generated_password {
+    text-align: center;
 }
 
 .content_holder {
     margin: 20px;
+    padding: 20px;
+
+    width: 75%;
+    border-style: ridge;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #content_password_configuration {
