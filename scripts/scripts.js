@@ -7,7 +7,7 @@ function generatePassword() {
     var generatedPassword = document.getElementById("generated_password");
 
     // assigns the user inputted value where the user inputs password length
-    let userPromptPasswordLength = prompt("Enter a password length between 8 and 40 (inclusive):");
+    let userPromptPasswordLength = prompt("Enter a password length between 8 and 128 (inclusive):");
 
     // ends the function when the user has inputted nothing
     if(userPromptPasswordLength == "" || userPromptPasswordLength == null) {
@@ -17,9 +17,9 @@ function generatePassword() {
     }
 
     // ends function when the user enters a length that it less than 8 or greater than 40
-    if (userPromptPasswordLength > 40 || userPromptPasswordLength < 8) {
-        alert("Password length is not between the length of 8 and 40.");
-        generatedPassword.value = "Password length must be between 8 and 40.";
+    if (userPromptPasswordLength > 128 || userPromptPasswordLength < 8) {
+        alert("Password length is not between the length of 8 and 128.");
+        generatedPassword.value = "Password length must be between 8 and 128.";
         return;
     }
 
@@ -38,12 +38,14 @@ function generatePassword() {
     }
 
     // three strings holding each category of possible password elements
-    let possibleLetters = "abcdefghijklmnopqrstuvwxyz";
+    let possibleUppercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+    let possibleLowercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let possibleNumbers = "0123456789";
     let possibleSpecial = "!#$%&'()\"*+,-./:;<=>?@[\]^_`{|}~";
 
     // assigns password parameter checkbox booleans
-    let checkedLetters = document.getElementById("check_letters").checked;
+    let checkedUppercaseLetters = document.getElementById("check_uppercase_letters").checked;
+    let checkedLowercaseLetters = document.getElementById("check_lowercase_letters").checked;
     let checkedNumbers = document.getElementById("check_numbers").checked;
     let checkedSpecial = document.getElementById("check_special").checked;
 
@@ -51,14 +53,18 @@ function generatePassword() {
     let allLetNumSpec = "";
 
     // ends function when no password parameters are checked
-    if(checkedLetters == false && checkedNumbers == false && checkedSpecial == false) {
+    if(checkedUppercaseLetters == false && checkedLowercaseLetters == false && checkedNumbers == false && checkedSpecial == false) {
         generatedPassword.value = "No password parameter selected.";
         return;
     }
 
     // checkbox to allow letters in output
-    if (checkedLetters) {
-        allLetNumSpec += possibleLetters;
+    if (checkedUppercaseLetters) {
+        allLetNumSpec += possibleUppercaseLetters;
+    }
+
+    if (checkedLowercaseLetters) {
+        allLetNumSpec += possibleLowercaseLetters;
     }
 
     // checkbox to allow numbers in output
