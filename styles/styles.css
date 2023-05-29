@@ -34,7 +34,8 @@ body {
     border-style: ridge;
 
     display: flex;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -44,6 +45,19 @@ body {
     justify-content: center;
 }
 
-#content_password_configuration input {
-    margin: 0px 10px;
+#content_button {
+    border-radius: 10px;
+    background-color: red;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 2px 2px black;
+}
+
+#content_button:active {
+    box-shadow: 1px 1px black inset;
+}
+
+#content_button:hover {
+    background-color: lightcoral;
 }
