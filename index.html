@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
+
+    <!-- header elements -->
     <section id="content_head" class="content_holder">
       <p id="header_text" class="header_font">Simple Password Generator</p>
     </section>
+
+    <!-- main content elements -->
     <section id="content_body" class = "content_holder">
-      <section id="content_password_configuration" class="">
+
+      <!-- checkboxes -->
+      <section id="content_password_configuration">
         <input type="checkbox" id="check_uppercase_letters">
           <p>Allow Uppercase Letters</p>
         <input type="checkbox" id="check_lowercase_letters">
@@ -21,10 +27,14 @@
         <input type="checkbox" id="check_special">
           <p>Allow Special Characters</p>
       </section>
-      <button id="content_button" class="">
+
+      <!-- clickable button -->
+      <button id="content_button">
         <p id="user_click_generate_password">Generate Password</p>
       </button>
-      <section id="content_generated_password" class="">
+
+      <!-- output textarea -->
+      <section id="content_generated_password">
         <textarea readonly id="generated_password" class="password_font" placeholder="Your new password will appear here."></textarea>
       </section>
     </section>

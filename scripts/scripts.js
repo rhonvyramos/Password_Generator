@@ -73,11 +73,12 @@ function generatePassword() {
         return;
     }
 
-    // checkbox to allow letters in output
+    // checkbox to allow uppercase letters in output
     if (checkedUppercaseLetters) {
         allLetNumSpec += possibleUppercaseLetters;
     }
 
+    // checkbox to allow lowercase letters in output
     if (checkedLowercaseLetters) {
         allLetNumSpec += possibleLowercaseLetters;
     }
@@ -97,9 +98,10 @@ function generatePassword() {
 
     var password = "";
 
-    // adds random letter or number from all possible letters array into password
     // iterates based on user's desired password length
     for (let x = 0; x < userPromptPasswordLength; x++) {
+
+        // adds random letter or number from all possible letters array into password
         let randIndex = Math.floor(Math.random() * possibleLettersDigits.length);
         password += possibleLettersDigits[randIndex];
     }

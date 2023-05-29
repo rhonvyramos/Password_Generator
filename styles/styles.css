@@ -9,6 +9,7 @@ textarea {
     width: 500px;
 }
 
+/* centers all elements */
 body {
     display: flex;
     flex-direction: column;
@@ -26,6 +27,7 @@ body {
     text-align: center;
 }
 
+/* universal styling for important page elements */
 .content_holder {
     margin: 20px;
     padding: 20px;
