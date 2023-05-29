@@ -16,3 +16,13 @@ body {
     margin: 20px;
 }
 
+#content_password_configuration {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#content_password_configuration input {
+    margin: 0px 10px;
+}
+
