@@ -3,8 +3,24 @@ var generatePasswordButton = document.getElementById("content_button");
 
 function generatePassword() {
 
-    // assigns the element where the user inputs password length
-    let userPromptPasswordLength = document.getElementById("user_prompt_password_length").value;
+    // prompt() method asks the user for an input value between 8 and 40, inclusive
+    let userPromptFromAlert = prompt("Enter a password length between 8 and 40 (inclusive):")
+
+    // assigns the user inputted value where the user inputs password length
+    let userPromptPasswordLength = userPromptFromAlert;
+
+    // ends function when the user enters a length that it less than 8 or greater than 40
+    if (userPromptPasswordLength > 40 || userPromptPasswordLength < 8) {
+        alert("Password length is not between the length of 8 and 40.");
+        generatedPassword.value = "Password length must be between 8 and 40.";
+        return;
+    }
+
+    // confirm() method allows user to end function prematurely if desired length is not what they want
+    if (confirm("Continue with a password of " + userPromptPasswordLength + " length?") == false) {
+        alert("Press \"Generate Password\" again to restart with a new password length.");
+        return;
+    }
 
     // assigns the element where the newly generated password will output
     var generatedPassword = document.getElementById("generated_password");
@@ -12,12 +28,6 @@ function generatePassword() {
     // ends the function when the user has inputted nothing
     if(userPromptPasswordLength == "") {
         generatedPassword.value = "There is nothing inside the input.";
-        return;
-    }
-
-    // ends function when the user enters a length that it less than 8 or greater than 40
-    if (userPromptPasswordLength > 40 || userPromptPasswordLength < 8) {
-        generatedPassword.value = "Password length must be between 8 and 40.";
         return;
     }
 
@@ -77,6 +87,8 @@ function generatePassword() {
 
     // outputs newly generated password into output box
     generatedPassword.value = password;
+
+    alert("The password has been generated!");
 }
 
 // listens to when user clicks the generate password button
