@@ -4,6 +4,7 @@ function generatePassword() {
 
     // assigns the element where the user inputs password length
     let userPromptPasswordLength = document.getElementById("user_prompt_password_length").value;
+    console.log(userPromptPasswordLength);
 
     // assigns the element where the newly generated password will output
     var generatedPassword = document.getElementById("generated_password");
@@ -11,6 +12,14 @@ function generatePassword() {
     // ends function when the user enters a length that it less than 8 or greater than 40
     if (userPromptPasswordLength > 40 || userPromptPasswordLength < 8) {
         generatedPassword.value = "Unsatisfied password length parameters.";
+        return;
+    }
+
+    // ends function when the user enters an input that contains anything other than a number
+    // regex \d+ represents one or more numbers
+    // regex $ represents ending the line
+    if(!/^\d+$/.test(userPromptPasswordLength)) {
+        generatedPassword.value = "Only non-decimal numbers are allowed in the input.";
         return;
     }
 
