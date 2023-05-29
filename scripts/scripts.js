@@ -1,13 +1,19 @@
+// assigns the button that will be clicked
 var generatePasswordButton = document.getElementById("content_button");
 
 function generatePassword() {
 
     // assigns the element where the user inputs password length
     let userPromptPasswordLength = document.getElementById("user_prompt_password_length").value;
-    console.log(userPromptPasswordLength);
 
     // assigns the element where the newly generated password will output
     var generatedPassword = document.getElementById("generated_password");
+
+    // ends the function when the user has inputted nothing
+    if(userPromptPasswordLength == "") {
+        generatedPassword.value = "There is nothing inside the input.";
+        return;
+    }
 
     // ends function when the user enters a length that it less than 8 or greater than 40
     if (userPromptPasswordLength > 40 || userPromptPasswordLength < 8) {
