@@ -17,7 +17,7 @@ function generatePassword() {
 
     // ends function when the user enters a length that it less than 8 or greater than 40
     if (userPromptPasswordLength > 40 || userPromptPasswordLength < 8) {
-        generatedPassword.value = "Unsatisfied password length parameters.";
+        generatedPassword.value = "Password length must be between 8 and 40.";
         return;
     }
 
