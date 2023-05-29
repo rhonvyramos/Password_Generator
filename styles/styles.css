@@ -47,12 +47,3 @@ body {
 #content_password_configuration input {
     margin: 0px 10px;
 }
-
-#kitty_cat img {
-    position: fixed;
-    height: 600px;
-    width: 500px;
-
-    bottom: 20px;
-    right: 100px;
-}
