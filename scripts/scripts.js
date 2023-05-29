@@ -32,7 +32,7 @@ function generatePassword() {
     // three strings holding each category of possible password elements
     let possibleLetters = "abcdefghijklmnopqrstuvwxyz";
     let possibleNumbers = "0123456789";
-    let possibleSpecial = "@#$%^&*()[]{}";
+    let possibleSpecial = "!#$%&'()\"*+,-./:;<=>?@[\]^_`{|}~";
 
     // assigns password parameter checkbox booleans
     let checkedLetters = document.getElementById("check_letters").checked;
