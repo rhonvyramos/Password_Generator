@@ -1,6 +1,8 @@
 
 textarea {
     resize: none;
+    height: 50px;
+    width: 500px;
 }
 
 body {
@@ -8,5 +10,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.content_holder {
+    margin: 20px;
 }
 
