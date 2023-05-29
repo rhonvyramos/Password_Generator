@@ -19,6 +19,11 @@ function generatePassword() {
 
     let allLetNumSpec = "";
 
+    if(checkedLetters == false && checkedNumbers == false && checkedSpecial == false) {
+        generatedPassword.value = "No password parameter selected.";
+        return;
+    }
+
     if (checkedLetters) {
         allLetNumSpec += possibleLetters;
     }
