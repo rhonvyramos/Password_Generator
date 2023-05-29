@@ -12,13 +12,26 @@ function generatePassword() {
     // ends the function when the user has inputted nothing
     if(userPromptPasswordLength == "" || userPromptPasswordLength == null) {
         alert("The input is blank.");
+
+       // writes parameter reminder text in output box
         generatedPassword.value = "There is nothing inside the input.";
         return;
     }
 
     // ends function when the user enters a length that it less than 8 or greater than 40
     if (userPromptPasswordLength > 128 || userPromptPasswordLength < 8) {
-        alert("Password length is not between the length of 8 and 128.");
+
+        // alert presented when password length is greater than 128
+        if(userPromptPasswordLength > 128) {
+            alert("Password length " +  userPromptPasswordLength + " is too long.");
+        }
+
+        // alert presented when password length is less than 8
+        if(userPromptPasswordLength < 8) {
+            alert("Password length " +  userPromptPasswordLength + " is too short.");
+        }
+
+       // writes parameter reminder text in output box
         generatedPassword.value = "Password length must be between 8 and 128.";
         return;
     }
@@ -33,6 +46,8 @@ function generatePassword() {
     // regex \d+ represents one or more numbers
     // regex $ represents ending the line
     if(!/^\d+$/.test(userPromptPasswordLength)) {
+
+        // writes parameter reminder text in output box
         generatedPassword.value = "Only non-decimal numbers are allowed in the input.";
         return;
     }
@@ -92,6 +107,7 @@ function generatePassword() {
     // outputs newly generated password into output box
     generatedPassword.value = password;
 
+    // final alert presenting that the function has fully executed
     alert("The password has been generated!");
 }
 
