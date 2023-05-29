@@ -13,6 +13,13 @@ function generatePassword() {
     let possibleNumbers = "0123456789";
     let possibleSpecial = "@#$%^&*()[]{}";
 
+    let checkedLetters = document.getElementById("check_letters").checked;
+    let checkedNumbers = document.getElementById("check_numbers").checked;
+    let checkedSpecial = document.getElementById("check_special").checked;
+    console.log(checkedLetters);
+    console.log(checkedNumbers);
+    console.log(checkedSpecial);
+
     let allLetNumSpec = possibleLetters + possibleNumbers + possibleSpecial;
     let possibleLettersDigits = allLetNumSpec.split("");
 
