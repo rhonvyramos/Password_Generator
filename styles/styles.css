@@ -37,6 +37,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 10px 10px 5px gray;
 }
 
 #content_password_configuration {
@@ -51,11 +53,11 @@ body {
     font-size: larger;
     font-weight: bolder;
     color: white;
-    box-shadow: 2px 2px black;
+    box-shadow: 2px 2px 5px gray;
 }
 
 #content_button:active {
-    box-shadow: 1px 1px black inset;
+    box-shadow: 1px 1px 5px black inset;
 }
 
 #content_button:hover {
