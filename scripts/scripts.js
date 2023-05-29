@@ -3,11 +3,18 @@ var generatePasswordButton = document.getElementById("content_button");
 
 function generatePassword() {
 
-    // prompt() method asks the user for an input value between 8 and 40, inclusive
-    let userPromptFromAlert = prompt("Enter a password length between 8 and 40 (inclusive):")
+    // assigns the element where the newly generated password will output
+    var generatedPassword = document.getElementById("generated_password");
 
     // assigns the user inputted value where the user inputs password length
-    let userPromptPasswordLength = userPromptFromAlert;
+    let userPromptPasswordLength = prompt("Enter a password length between 8 and 40 (inclusive):");
+
+    // ends the function when the user has inputted nothing
+    if(userPromptPasswordLength == "" || userPromptPasswordLength == null) {
+        alert("The input is blank.");
+        generatedPassword.value = "There is nothing inside the input.";
+        return;
+    }
 
     // ends function when the user enters a length that it less than 8 or greater than 40
     if (userPromptPasswordLength > 40 || userPromptPasswordLength < 8) {
@@ -19,15 +26,6 @@ function generatePassword() {
     // confirm() method allows user to end function prematurely if desired length is not what they want
     if (confirm("Continue with a password of " + userPromptPasswordLength + " length?") == false) {
         alert("Press \"Generate Password\" again to restart with a new password length.");
-        return;
-    }
-
-    // assigns the element where the newly generated password will output
-    var generatedPassword = document.getElementById("generated_password");
-
-    // ends the function when the user has inputted nothing
-    if(userPromptPasswordLength == "") {
-        generatedPassword.value = "There is nothing inside the input.";
         return;
     }
 
