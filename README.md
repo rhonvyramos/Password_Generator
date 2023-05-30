@@ -7,6 +7,7 @@ Install the repository onto your machine and run the index.html file on a live s
 
 ## Use
 Below is the link to the page as it appears to visitors:
+
 https://rhonvyramos.github.io/Password_Generator/
 
 ## Screencap
