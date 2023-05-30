@@ -109,8 +109,9 @@ function generatePassword() {
     // outputs newly generated password into output box
     generatedPassword.value = password;
 
-    // final alert presenting that the function has fully executed
-    alert("The password has been generated!");
+    // final prompt presenting that the function has fully executed
+    // allows the user to immediately copy and paste the output password onto another document
+    prompt("The password has been generated! Copy and paste it on a text file to save it!", password);
 }
 
 // listens to when user clicks the generate password button
