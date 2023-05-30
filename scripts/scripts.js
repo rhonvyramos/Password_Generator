@@ -110,7 +110,7 @@ function generatePassword() {
     generatedPassword.value = password;
 
     // final alert presenting that the function has fully executed
-    alert("The password has been generated!\n" + password);
+    alert("The password has been generated!");
 }
 
 // listens to when user clicks the generate password button
