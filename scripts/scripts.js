@@ -53,8 +53,8 @@ function generatePassword() {
     }
 
     // three strings holding each category of possible password elements
-    let possibleUppercaseLetters = "abcdefghijklmnopqrstuvwxyz";
-    let possibleLowercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let possibleUppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let possibleLowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
     let possibleNumbers = "0123456789";
     let possibleSpecial = "!#$%&'()\"*+,-./:;<=>?@[\]^_`{|}~";
 
@@ -110,7 +110,7 @@ function generatePassword() {
     generatedPassword.value = password;
 
     // final alert presenting that the function has fully executed
-    alert("The password has been generated!");
+    alert("The password has been generated!\n" + password);
 }
 
 // listens to when user clicks the generate password button
