@@ -1,10 +1,11 @@
 // assigns the button that will be clicked
 var generatePasswordButton = document.getElementById("content_button");
+var clearOutputButton = document.getElementById("content_clear_output_button");
+
+// assigns the element where the newly generated password will output
+var generatedPassword = document.getElementById("generated_password");
 
 function generatePassword() {
-
-    // assigns the element where the newly generated password will output
-    var generatedPassword = document.getElementById("generated_password");
 
     // assigns the user inputted value where the user inputs password length
     let userPromptPasswordLength = prompt("Enter a password length between 8 and 128 (inclusive):");
@@ -114,5 +115,10 @@ function generatePassword() {
     prompt("The password has been generated! Copy and paste it on a text file to save it!", password);
 }
 
+function clearOutput() {
+    generatedPassword.value = "";
+}
+
 // listens to when user clicks the generate password button
 generatePasswordButton.addEventListener("click", generatePassword);
+clearOutputButton.addEventListener("click", clearOutput);
