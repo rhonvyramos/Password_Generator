@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
@@ -15,6 +16,16 @@
 
     <!-- main content elements -->
     <section id="content_body" class = "content_holder">
+
+      <!-- output area title -->
+      <section id="content_generator_title">
+        <p>Generate a Password</p>
+      </section>
+
+      <!-- output textarea -->
+      <section id="content_generated_password">
+        <textarea readonly id="generated_password" class="password_font" placeholder="Your new password will appear here."></textarea>
+      </section>
 
       <!-- checkboxes -->
       <section id="content_password_configuration">
@@ -39,10 +50,7 @@
       </section>
 
 
-      <!-- output textarea -->
-      <section id="content_generated_password">
-        <textarea readonly id="generated_password" class="password_font" placeholder="Your new password will appear here."></textarea>
-      </section>
+
     </section>
     <script src="scripts/scripts.js"></script>
   </body>

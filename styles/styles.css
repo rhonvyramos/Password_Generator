@@ -1,12 +1,17 @@
 
 * {
     margin: 10px;
+    font-size: 105%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 textarea {
     resize: none;
     height: 50px;
     width: 500px;
+
+    border-style: dashed;
+    border-radius: 5px;
 }
 
 /* universal styling for important page elements */
@@ -62,6 +67,7 @@ body {
     font-weight: bolder;
     color: white;
     box-shadow: 2px 2px 5px gray;
+    margin: 0px 10px;
 }
 
 .clickable_button:active {
