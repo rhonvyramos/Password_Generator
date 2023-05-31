@@ -11,4 +11,4 @@ Below is the link to the page as it appears to visitors:
 https://rhonvyramos.github.io/Password_Generator/
 
 ## Screencap
-![image](https://github.com/rhonvyramos/Password_Generator/assets/126701940/22862ab6-0973-4e40-ab0f-e76d515e2669)
+![image](https://github.com/rhonvyramos/Password_Generator/assets/126701940/e9ff8085-a70f-42a0-9b0e-46e2c6c73f5f)
