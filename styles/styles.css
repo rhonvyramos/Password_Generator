@@ -78,3 +78,7 @@ body {
 .clickable_button:hover {
     background-color: lightcoral;
 }
+
+input {
+    margin-left: 30px;
+}
